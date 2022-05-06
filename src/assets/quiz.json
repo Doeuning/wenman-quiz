@@ -391,5 +391,33 @@
         "checked": false
       }
     ]
+  },
+  {
+    "name": "quiz11",
+    "answer": 1,
+    "choosed": null,
+    "q": "홍렬이 가게 업종을 바꾸려 했을 때, 가족들이 원하는 업종이 각자 달랐다. 이름과 원하는 업종이 잘 못 짝지어진 것은?",
+    "a": [
+      {
+        "id": 1,
+        "txt": "영삼, 미나 - 문방구",
+        "checked": false
+      },
+      {
+        "id": 2,
+        "txt": "주현, 재황 - 비디오 가게",
+        "checked": false
+      },
+      {
+        "id": 3,
+        "txt": "정수, 민정 - 아이스크림 가게",
+        "checked": false
+      },
+      {
+        "id": 4,
+        "txt": "노구, 오중 - 건강원",
+        "checked": false
+      }
+    ]
   }
 ]
