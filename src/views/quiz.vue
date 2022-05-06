@@ -57,7 +57,10 @@ export default {
   computed: {
     ...mapState(["score"]),
     showGiveup() {
-      if (this.currIdx > this.quiz.length / 2 && this.$store.score <= 30) {
+      if (
+        this.currIdx > this.quiz.length / 2 &&
+        this.$store.state.score <= 30
+      ) {
         return true;
       } else {
         return false;
