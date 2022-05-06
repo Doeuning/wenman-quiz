@@ -97,5 +97,38 @@
             "checked": false
          }
       ]
+   },
+   {
+      "name": "quiz3",
+      "answer": 3,
+      "choosed": null,
+      "q": "영삼의 여자친구 혜미는 노구가 자신의 방문을 달가워하지 않자, 할머니가 만드신 특별한 '이것'으로 노구를 달래는 데 성공한다. 노구의 마음을 빼앗은 '이것'은?",
+      "a": [
+         {
+            "id": 1,
+            "txt": "양갱",
+            "checked": false
+         },
+         {
+            "id": 2,
+            "txt": "한과",
+            "checked": false
+         },
+         {
+            "id": 3,
+            "txt": "떡",
+            "checked": false
+         },
+         {
+            "id": 4,
+            "txt": "곶감",
+            "checked": false
+         },
+         {
+            "id": 5,
+            "txt": "군고구마",
+            "checked": false
+         }
+      ]
    }
 ]

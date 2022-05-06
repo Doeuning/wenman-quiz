@@ -19,7 +19,7 @@
       <button type="button" class="btn-next" @click="nextQuiz">
         다음 문제
       </button>
-      <button type="button" class="btn-giveup">포기</button>
+      <button type="button" class="btn-giveup" v-if="showGiveup">포기</button>
     </div>
   </div>
 </template>
@@ -31,27 +31,36 @@ import getQuiz from "@/assets/quiz.json";
 
 export default {
   name: "quiz-page",
-  computed: {
-    ...mapState(["score"]),
-  },
   components: {
     "form-radio": formRadio,
   },
   data() {
     return {
-      quiz: "",
+      quiz: [],
       currIdx: 0,
     };
   },
   created() {
     this.fetchQuiz();
   },
+  mounted() {
+    console.log(this.currIdx, this.quiz.length);
+  },
+  computed: {
+    ...mapState(["score"]),
+    showGiveup() {
+      if (this.currIdx > this.quiz.length / 2 && this.$store.score <= 30) {
+        return true;
+      } else {
+        return false;
+      }
+    },
+  },
   methods: {
     ...mapMutations(["MU_CHANGE_SCORE"]),
     async fetchQuiz() {
       try {
         this.quiz = await getQuiz;
-        console.log(this.quiz);
       } catch (e) {
         console.log(e);
       }
@@ -60,7 +69,7 @@ export default {
       this.currIdx--;
     },
     nextQuiz() {
-      if (this.quiz[this.currIdx].choosed) {
+      if (this.quiz[this.currIdx].choosed && this.currIdx < this.quiz.length) {
         if (
           this.quiz[this.currIdx].choosed === this.quiz[this.currIdx].answer
         ) {

@@ -29,9 +29,6 @@ export default {
       return layout ? `Layout${layout}` : null;
     },
   },
-  mounted() {
-    console.log(this.mobileYn);
-  },
 };
 </script>
 
