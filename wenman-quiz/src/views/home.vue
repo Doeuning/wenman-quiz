@@ -3,7 +3,7 @@
     <div class="intro jua">
       SBS 일일시트콤
       <h1 class="tit">웬만해선 그들을 막을 수 없다</h1>
-      덕후 레벨 TEST
+      덕후 LEVEL TEST
     </div>
     <div class="img-tv">
       <img class="tv" src="@/assets/images/tv.png" alt="" />
@@ -56,6 +56,11 @@ export default {
     .img {
       width: 250px;
     }
+  }
+}
+.btn-wrap {
+  .btn-start {
+    font-size: 26px;
   }
 }
 </style>

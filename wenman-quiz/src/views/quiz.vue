@@ -44,11 +44,11 @@ export default {
       currIdx: 0,
     };
   },
-  created() {
-    this.fetchQuiz();
-  },
+
   mounted() {
-    this.quiz = [];
+    // this.quiz.map((el) => {
+    //   el;
+    // });
     this.fetchQuiz();
   },
   computed: {
@@ -64,9 +64,10 @@ export default {
   methods: {
     ...mapMutations(["MU_CHANGE_SCORE"]),
     async fetchQuiz() {
+      const newQuiz = getQuiz;
       this.quiz = [];
       try {
-        this.quiz = await getQuiz;
+        this.quiz = await JSON.parse(JSON.stringify(newQuiz));
       } catch (e) {
         console.log(e);
       }
@@ -99,8 +100,11 @@ export default {
 
 <style scoped lang="scss">
 .tit {
+  padding-left: 25px;
   font-weight: 700;
   font-size: 24px;
+  word-break: keep-all;
+  text-indent: -25px;
 }
 .quiz {
   margin-top: 30px;

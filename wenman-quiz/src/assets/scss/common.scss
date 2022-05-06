@@ -16,18 +16,17 @@ body {
 #app {
   display: flex;
   align-items: center;
-  height: 100%;
+  min-height: 100%;
 }
 #wrap {
   box-sizing: border-box;
   max-width: 1080px;
   width: 520px;
-  max-height: 90vh;
+  padding: 20px;
   margin: 0 auto;
   .mobile & {
     width: 100%;
     max-width: 640px;
-    padding: 0 30px;
   }
 }
 
@@ -38,6 +37,7 @@ body {
   margin-top: 50px;
   [class^="btn-"] {
     display: block;
+    font-weight: 700;
     font-size: 20px;
   }
 }
