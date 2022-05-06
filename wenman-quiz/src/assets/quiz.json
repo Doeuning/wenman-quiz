@@ -1,0 +1,101 @@
+[
+   {
+      "name":"quiz1",
+      "answer":4,
+      "choosed":null,
+      "q":"주현이 작년 설 선물로 받은 것은?",
+      "a":[
+         {
+            "id":1,
+            "txt":"한우 셋뜨",
+            "checked":false
+         },
+         {
+            "id":2,
+            "txt":"샴푸 셋뜨",
+            "checked":false
+         },
+         {
+            "id":3,
+            "txt":"양갱 셋뜨",
+            "checked":false
+         },
+         {
+            "id":4,
+            "txt":"비누 셋뜨",
+            "checked":false
+         },
+         {
+            "id":5,
+            "txt":"김 셋뜨",
+            "checked":false
+         }
+      ]
+   },
+   {
+      "name": "quiz2",
+      "answer": 1,
+      "choosed": null,
+      "q": "홍렬이 종옥의 마음을 얻기 위해 시도해보지 않은것은?",
+      "a": [
+         {
+            "id": 1,
+            "txt": "키높이 구두 신기",
+            "checked": false
+         },
+         {
+            "id": 2,
+            "txt": "뿔테안경으로 바꾸기",
+            "checked": false
+         },
+         {
+            "id": 3,
+            "txt": "오중이 팔 꺾기",
+            "checked": false
+         },
+         {
+            "id": 4,
+            "txt": "트렌치코트 입기",
+            "checked": false
+         },
+         {
+            "id": 5,
+            "txt": "수염 기르기",
+            "checked": false
+         }
+      ]
+   },
+   {
+      "name": "quiz3",
+      "answer": 2,
+      "choosed": null,
+      "q": "오중은 전국적으로 유행할 수 있는 게임을 만들었다. 이 게임의 구호는?",
+      "a": [
+         {
+            "id": 1,
+            "txt": "오중 짝, 오중 짝, 오중 오중 짝 짝",
+            "checked": false
+         },
+         {
+            "id": 2,
+            "txt": "오중중, 오중중, 오 오중 (정답)",
+            "checked": false
+         },
+         {
+            "id": 3,
+            "txt": "오, 오 오 오, 중, 중 중 중, 오 오 중 중 오중오중 놀이",
+            "checked": false
+         },
+         {
+            "id": 4,
+            "txt": "오, 오 오 오 중을 사랑해",
+            "checked": false
+         },
+         {
+            "id": 5,
+            "txt": "하늘이에서 내려온 오중이가 하는 말! 오 중중 오중중 오 중중 오중중",
+            "checked": false
+         }
+      ]
+   }
+]
