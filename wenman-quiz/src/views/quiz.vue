@@ -14,17 +14,15 @@
     </ul>
     <div class="btn-wrap">
       <button type="button" class="btn-prev" @click="prevQuiz">
-        이전 문제
+        <template v-if="this.currIdx !== 0"> 이전 문제 </template>
+        <template v-else> 자신없다... 처음으로 </template>
       </button>
-      <button
-        type="button"
-        class="btn-next"
-        @click="nextQuiz"
-        v-if="this.currIdx + 1 < this.quiz.length"
-      >
-        다음 문제
+      <button type="button" class="btn-next" @click="nextQuiz">
+        <template v-if="this.currIdx + 1 < this.quiz.length">
+          다음 문제
+        </template>
+        <template v-else>결과보기</template>
       </button>
-      <router-link to="/result" class="btn-next" v-else>결과보기</router-link>
       <button type="button" class="btn-giveup" v-if="showGiveup">포기</button>
     </div>
   </div>
@@ -49,7 +47,10 @@ export default {
   created() {
     this.fetchQuiz();
   },
-  mounted() {},
+  mounted() {
+    this.quiz = [];
+    this.fetchQuiz();
+  },
   computed: {
     ...mapState(["score"]),
     showGiveup() {
@@ -63,6 +64,7 @@ export default {
   methods: {
     ...mapMutations(["MU_CHANGE_SCORE"]),
     async fetchQuiz() {
+      this.quiz = [];
       try {
         this.quiz = await getQuiz;
       } catch (e) {
@@ -70,7 +72,11 @@ export default {
       }
     },
     prevQuiz() {
-      this.currIdx--;
+      if (this.currIdx !== 0) {
+        this.currIdx--;
+      } else {
+        this.$router.push("/");
+      }
     },
     nextQuiz() {
       console.log(this.currIdx, this.quiz.length);
@@ -80,7 +86,11 @@ export default {
         ) {
           this.$store.commit("MU_CHANGE_SCORE");
         }
-        this.currIdx++;
+        if (this.currIdx + 1 === this.quiz.length) {
+          this.$router.push("/result");
+        } else {
+          this.currIdx++;
+        }
       }
     },
   },
@@ -99,5 +109,8 @@ export default {
       margin-top: 15px;
     }
   }
+}
+.btn-wrap {
+  justify-content: space-between;
 }
 </style>

@@ -40,6 +40,7 @@ export default {
   border-radius: 10px;
   padding: 10px;
   cursor: pointer;
+  transition: all 0.3s;
   input {
     display: block;
     position: absolute;
@@ -57,8 +58,8 @@ export default {
     font-weight: 700;
   }
   &.checked {
-    border-color: cornflowerblue;
-    background: cornflowerblue;
+    border-color: #000;
+    background: #000;
     font-weight: 700;
     color: #fff;
   }

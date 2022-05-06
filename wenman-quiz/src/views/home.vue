@@ -9,13 +9,23 @@
       <img class="tv" src="@/assets/images/tv.png" alt="" />
       <img class="img" src="@/assets/images/main.jpg" alt="" />
     </div>
-    <router-link to="/quiz">시작하기</router-link>
+    <div class="btn-wrap">
+      <button type="button" class="btn-start" @click="testStart">
+        시작하기
+      </button>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: "home-page",
+  mounted() {},
+  methods: {
+    testStart() {
+      this.$router.push("/quiz");
+    },
+  },
 };
 </script>
 

@@ -1,9 +1,7 @@
 <template>
   <div id="wrap">
     <app-header />
-    <keep-alive>
-      <router-view :key="$route.path" />
-    </keep-alive>
+    <router-view :key="$route.path" />
   </div>
 </template>
 
