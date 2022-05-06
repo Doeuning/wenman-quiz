@@ -1,8 +1,8 @@
 <template>
   <div class="main">
     <div class="intro jua">
-      SBS 일일시트콤
-      <h1 class="tit">웬만해선 그들을 막을 수 없다</h1>
+      <div class="subtit">SBS 일일시트콤</div>
+      <h1 class="tit">웬만해선<br />그들을 막을 수 없다</h1>
       덕후 LEVEL TEST
     </div>
     <div class="img-tv">
@@ -35,6 +35,14 @@ export default {
 }
 .intro {
   font-size: 30px;
+  .subtit {
+    font-size: 18px;
+  }
+  .tit {
+    margin: 10px 0 20px;
+    font-size: 36px;
+    line-height: 1;
+  }
 }
 .img-tv {
   position: relative;
@@ -59,6 +67,7 @@ export default {
   }
 }
 .btn-wrap {
+  margin-top: 0;
   .btn-start {
     font-size: 26px;
   }
