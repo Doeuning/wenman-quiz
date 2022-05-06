@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="this.quiz.length">
     <h1 class="tit">{{ currIdx + 1 }}. {{ quiz[currIdx].q }}</h1>
     <ul class="quiz">
       <li v-for="item in quiz[currIdx].a" :key="item.id">
@@ -16,9 +16,15 @@
       <button type="button" class="btn-prev" @click="prevQuiz">
         이전 문제
       </button>
-      <button type="button" class="btn-next" @click="nextQuiz">
+      <button
+        type="button"
+        class="btn-next"
+        @click="nextQuiz"
+        v-if="this.currIdx + 1 < this.quiz.length"
+      >
         다음 문제
       </button>
+      <router-link to="/result" class="btn-next" v-else>결과보기</router-link>
       <button type="button" class="btn-giveup" v-if="showGiveup">포기</button>
     </div>
   </div>
@@ -43,9 +49,7 @@ export default {
   created() {
     this.fetchQuiz();
   },
-  mounted() {
-    console.log(this.currIdx, this.quiz.length);
-  },
+  mounted() {},
   computed: {
     ...mapState(["score"]),
     showGiveup() {
@@ -69,6 +73,7 @@ export default {
       this.currIdx--;
     },
     nextQuiz() {
+      console.log(this.currIdx, this.quiz.length);
       if (this.quiz[this.currIdx].choosed && this.currIdx < this.quiz.length) {
         if (
           this.quiz[this.currIdx].choosed === this.quiz[this.currIdx].answer
@@ -93,16 +98,6 @@ export default {
     & + li {
       margin-top: 15px;
     }
-  }
-}
-.btn-wrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 50px;
-  [class^="btn-"] {
-    display: block;
-    font-size: 20px;
   }
 }
 </style>

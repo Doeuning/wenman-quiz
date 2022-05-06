@@ -30,3 +30,14 @@ body {
     padding: 0 30px;
   }
 }
+
+.btn-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  [class^="btn-"] {
+    display: block;
+    font-size: 20px;
+  }
+}

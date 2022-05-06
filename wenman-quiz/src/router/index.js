@@ -19,6 +19,12 @@ let routes = [
     component: pages("quiz"),
     meta: { title: "quiz", layout: "Default" },
   },
+  {
+    path: "/result",
+    name: "result-page",
+    component: pages("result"),
+    meta: { title: "result", layout: "Default" },
+  },
   ...etc,
 ];
 

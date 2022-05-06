@@ -27,25 +27,11 @@ export default new Vuex.Store({
       }
       state.mobileYn = false;
     },
-    MU_TABLET_TYPE(state) {
-      const userAgent = navigator.userAgent.toLowerCase();
-      const isTablet =
-        /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(
-          userAgent
-        );
-      console.log(isTablet);
-      if (isTablet) {
-        state.tabletYn = true;
-        return;
-      } else {
-        state.tabletYn = false;
-      }
-    },
-    MU_CAN_LEAVE_SITE(state, payload) {
-      state.canLeaveSite = payload;
-    },
     MU_CHANGE_SCORE(state) {
       state.score += 5;
+    },
+    MU_RESET_SCORE(state) {
+      state.score = 0;
     },
   },
   actions: {},
