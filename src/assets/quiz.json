@@ -233,39 +233,6 @@
     ]
   },
   {
-    "name": "quiz6",
-    "answer": 3,
-    "choosed": null,
-    "q": "극 중 휴대폰 벨소리가 다른 한 명은?",
-    "a": [
-      {
-        "id": 1,
-        "txt": "권재황",
-        "checked": false
-      },
-      {
-        "id": 2,
-        "txt": "노민정",
-        "checked": false
-      },
-      {
-        "id": 3,
-        "txt": "권오중",
-        "checked": false
-      },
-      {
-        "id": 4,
-        "txt": "노윤영",
-        "checked": false
-      },
-      {
-        "id": 5,
-        "txt": "함재희",
-        "checked": false
-      }
-    ]
-  },
-  {
     "name": "quiz7",
     "answer": 4,
     "choosed": null,
