@@ -76,7 +76,7 @@ export default {
     };
   },
   methods: {
-    ...mapMutations(["MU_CHANGE_SCORE"]),
+    ...mapMutations(["MU_RESET_SCORE"]),
     replay() {
       this.$router.push("/");
       this.$store.commit("MU_RESET_SCORE");

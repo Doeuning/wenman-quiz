@@ -21,7 +21,7 @@
         type="button"
         class="btn-giveup"
         v-if="showGiveup || currIdx === 5"
-        @click="$router.push('/')"
+        @click="giveup"
       >
         포기
       </button>
@@ -78,27 +78,35 @@ export default {
         console.log(e);
       }
     },
+    giveup() {
+      if (confirm("게임을 포기하고 맨 앞으로 이동합니다.")) {
+        this.$router.push("/");
+      }
+    },
     prevQuiz() {
       if (this.currIdx !== 0) {
         this.currIdx--;
+        this.getScore();
       } else {
         this.$router.push("/");
       }
     },
     nextQuiz() {
-      console.log(this.currIdx, this.quiz.length);
-      if (this.quiz[this.currIdx].choosed && this.currIdx < this.quiz.length) {
-        if (
-          this.quiz[this.currIdx].choosed === this.quiz[this.currIdx].answer
-        ) {
-          this.$store.commit("MU_CHANGE_SCORE");
-        }
-        if (this.currIdx + 1 === this.quiz.length) {
-          this.$router.push("/result");
-        } else {
-          this.currIdx++;
-        }
+      // 정답을 선택했으면 인덱스추가, 점수가져오기
+      if (this.quiz[this.currIdx].choosed) {
+        this.currIdx++;
+        this.getScore();
+        console.log("정답선택");
       }
+      if (this.currIdx + 1 > this.quiz.length) {
+        this.$router.push("/result");
+        console.log("결과로 이동");
+      }
+
+      console.log(this.$store.state.score);
+    },
+    getScore() {
+      this.$store.commit("MU_CHANGE_SCORE", this.quiz); // 점수 변경
     },
   },
 };

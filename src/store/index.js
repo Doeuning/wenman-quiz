@@ -29,8 +29,16 @@ export default new Vuex.Store({
       }
       state.mobileYn = false;
     },
-    MU_CHANGE_SCORE(state) {
-      state.score += 5;
+    MU_CHANGE_SCORE(state, payload) {
+      let rightAnswers = 0;
+      payload.forEach((item) => {
+        if (item.answer === item.choosed) {
+          rightAnswers++;
+        }
+      });
+      console.log("rightAnswers", rightAnswers);
+      state.score = 5 * rightAnswers;
+      rightAnswers = 0;
     },
     MU_RESET_SCORE(state) {
       state.score = 0;
