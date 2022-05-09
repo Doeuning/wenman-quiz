@@ -57,10 +57,12 @@ export default {
     font-weight: 700;
   }
   &.checked {
-    border-color: #000;
-    background: #000;
+    border-color: #0000a3;
+    background: #0000a3;
     font-weight: 700;
     color: #fff;
+    box-shadow: inset 4px 4px 0 rgb(255 255 255 / 60%),
+      inset -4px -4px 0 rgb(0 0 0 / 60%);
   }
 }
 </style>

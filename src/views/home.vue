@@ -90,17 +90,17 @@ export default {
   position: relative;
   width: 500px;
   height: 400px;
-  margin: -5% auto 0;
+  margin: 10px auto 0;
   .tv {
     position: relative;
     z-index: 1;
   }
   .img {
     position: absolute;
-    top: 52%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 420px;
+    width: 400px;
   }
   .mobile & {
     max-width: 320px;
@@ -126,9 +126,6 @@ export default {
   .txt {
     flex: 1 0 auto;
     font-size: 26px;
-    &:last-child {
-      margin: 0;
-    }
   }
   .input {
     box-sizing: border-box;
@@ -148,7 +145,9 @@ export default {
     }
   }
   .mobile & {
-    margin-top: -20px;
+    .txt {
+      font-size: 24px;
+    }
   }
 }
 .btn-wrap {
