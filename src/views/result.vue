@@ -27,13 +27,17 @@
         URL 복사하기
       </button>
     </div>
-    <div class="btn-wrap">
-      <a
-        href="https://www.instagram.com/puppip_the_developer/"
-        target="_blank"
-        class="btn-go"
-        >개발자 인스타에서 난이도 항의하기</a
-      >
+    <!--    <div class="btn-wrap">-->
+    <!--      <a-->
+    <!--        href="https://www.instagram.com/puppip_the_developer/"-->
+    <!--        target="_blank"-->
+    <!--        class="btn-go"-->
+    <!--        >개발자 인스타에서 난이도 항의하기</a-->
+    <!--      >-->
+    <!--    </div>-->
+    <div class="footer">
+      <div>&copy; 2022. Dawn. All rights reserved.</div>
+      <div>doeuning@gmail.com</div>
     </div>
   </div>
 </template>
@@ -163,5 +167,10 @@ export default {
 }
 .btn-wrap {
   justify-content: center;
+}
+.footer {
+  margin: 50px -20px 0;
+  border-top: 1px solid #ddd;
+  padding: 30px 0;
 }
 </style>

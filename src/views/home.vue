@@ -9,6 +9,10 @@
       <img class="tv" src="@/assets/images/tv.png" alt="" />
       <img class="img" src="@/assets/images/main.jpg" alt="" />
     </div>
+    <div class="caution">
+      ※ 결과가 다소 상스러울 수 있으니, <br />
+      '웬만해선 그들을 막을 수 없다' 애청자만 이용 바랍니다.
+    </div>
     <div class="input-box">
       <div class="row">
         <span class="txt">내 이름은</span>
@@ -111,6 +115,11 @@ export default {
       top: 41%;
     }
   }
+}
+.caution {
+  margin: 10px 0;
+  font-weight: 700;
+  color: red;
 }
 .input-box {
   position: relative;
