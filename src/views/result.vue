@@ -27,6 +27,14 @@
         URL 복사하기
       </button>
     </div>
+    <div class="btn-wrap">
+      <a
+        href="https://www.instagram.com/puppip_the_developer/"
+        target="_blank"
+        class="btn-go"
+        >개발자 인스타에서 난이도 항의하기</a
+      >
+    </div>
   </div>
 </template>
 
@@ -109,7 +117,7 @@ export default {
   .user {
     display: block;
     position: absolute;
-    top: 25px;
+    top: 9%;
     right: 120px;
     text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.3);
     font-weight: 700;
@@ -120,25 +128,25 @@ export default {
   }
   &.level-4 {
     .user {
-      top: 75px;
+      top: 26%;
       right: 60px;
     }
   }
   &.level-3 {
     .user {
-      top: 130px;
+      top: 45%;
       right: 19px;
     }
   }
   &.level-2 {
     .user {
-      top: 185px;
+      top: 64%;
       right: 60px;
     }
   }
   &.level-1 {
     .user {
-      top: 235px;
+      top: 83%;
       right: 120px;
     }
   }
