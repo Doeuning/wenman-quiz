@@ -9,7 +9,7 @@ export default new Vuex.Store({
   state: {
     mobileYn: false,
     userName: "",
-    userAge: "",
+    userAge: 0,
     score: 0,
   },
   mutations: {

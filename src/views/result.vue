@@ -1,12 +1,26 @@
 <template>
   <div class="result">
     <h1 class="txt">{{ $store.state.userName }}님의 웬만덕후 레벨은????</h1>
-    <div class="img-box">
+    <div
+      :class="{
+        'img-box': true,
+        'level-4': result === '짱',
+        'level-3': result === '붕',
+        'level-2': result === '열라붕',
+        'level-1': result === '열라붕신',
+      }"
+    >
       <img src="@/assets/images/level.jpg" alt="" />
-      <span class="user">{{ $store.state.userName }}</span>
+      <span class="user jua">{{ $store.state.userName }}</span>
     </div>
-    <div class="tit jua">"{{ result }}"</div>
-    <h2 class="score">총점 {{ total }}점 입니다.</h2>
+    <h2 class="score">총점 {{ total }}점으로</h2>
+    <div class="txt">
+      {{ member }}과(와) 같은
+      <div class="tit jua">
+        "{{ result }}<span v-if="$store.state.userAge > 35">님</span>"
+      </div>
+      입니다.
+    </div>
     <div class="btn-wrap">
       <button class="btn-replay" @click="replay">억울하면 다시하기</button>
       <button class="btn-share" type="button" @click="copyUrl">
@@ -27,19 +41,25 @@ export default {
   mounted() {
     if (this.total >= 90) {
       this.result = "열라짱"; // 18문제
+      this.member = "권재황";
     } else if (this.total >= 75 && this.total < 90) {
       this.result = "짱"; // 15문제
+      this.member = "노인삼, 노미나";
     } else if (this.total >= 50 && this.total < 75) {
       this.result = "붕"; // 10문제
+      this.member = "노홍렬, 노민정, 노윤영";
     } else if (this.total >= 35 && this.total < 50) {
       this.result = "열라붕"; // 7문제
+      this.member = "함재희, 김지현";
     } else {
       this.result = "열라붕신";
+      this.member = "권오중";
     }
   },
   data() {
     return {
       result: "",
+      member: "권재황",
       total: this.$store.state.score,
     };
   },
@@ -65,6 +85,17 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@keyframes move {
+  0% {
+    transform: translateX(10px);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(10px);
+  }
+}
 .result {
   text-align: center;
 }
@@ -78,12 +109,42 @@ export default {
   .user {
     display: block;
     position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
+    top: 25px;
+    right: 120px;
+    text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.3);
+    font-weight: 700;
+    font-size: 26px;
     color: #fff;
     z-index: 20;
+    animation: move 1s ease-in-out infinite;
   }
+  &.level-4 {
+    .user {
+      top: 75px;
+      right: 60px;
+    }
+  }
+  &.level-3 {
+    .user {
+      top: 130px;
+      right: 19px;
+    }
+  }
+  &.level-2 {
+    .user {
+      top: 185px;
+      right: 60px;
+    }
+  }
+  &.level-1 {
+    .user {
+      top: 235px;
+      right: 120px;
+    }
+  }
+}
+.txt {
+  margin-top: 10px;
 }
 .tit {
   font-size: 50px;
