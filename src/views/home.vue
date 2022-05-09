@@ -9,6 +9,31 @@
       <img class="tv" src="@/assets/images/tv.png" alt="" />
       <img class="img" src="@/assets/images/main.jpg" alt="" />
     </div>
+    <div class="input-box">
+      <div class="row">
+        <span class="txt">내 이름은</span>
+        <input
+          type="text"
+          id="userName"
+          v-model="userName"
+          class="input"
+          placeholder="노영삼"
+        />
+        <span class="txt"> 이고,</span><br />
+      </div>
+      <div class="row">
+        <span class="txt">나이는</span>
+        <input
+          type="tel"
+          id="userAge"
+          v-model="userAge"
+          class="input"
+          placeholder="16"
+          @keydown.enter="testStart"
+        />
+        <span class="txt"> 살입니다.</span>
+      </div>
+    </div>
     <div class="btn-wrap">
       <button type="button" class="btn-start" @click="testStart">
         시작하기
@@ -18,12 +43,29 @@
 </template>
 
 <script>
+import { mapMutations } from "vuex";
 export default {
   name: "home-page",
   mounted() {},
+  data() {
+    return {
+      userName: "",
+      userAge: "",
+    };
+  },
+  computed: {},
   methods: {
+    ...mapMutations(["GET_USER_INFO"]),
     testStart() {
-      this.$router.push("/quiz");
+      if (this.userName !== "" && this.userAge !== "") {
+        this.$store.commit("GET_USER_INFO", {
+          name: this.userName,
+          age: this.userAge,
+        });
+        this.$router.push("/quiz");
+      } else {
+        alert("이름과 나이를 입력해주세요.");
+      }
     },
   },
 };
@@ -47,27 +89,69 @@ export default {
 .img-tv {
   position: relative;
   width: 500px;
-  margin: 0 auto;
+  height: 400px;
+  margin: -5% auto 0;
   .tv {
     position: relative;
     z-index: 1;
   }
   .img {
     position: absolute;
-    top: 41%;
+    top: 52%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 420px;
   }
   .mobile & {
     max-width: 320px;
+    height: auto;
+    margin: 0 auto;
     .img {
-      width: 250px;
+      width: 270px;
+      top: 41%;
     }
   }
 }
+.input-box {
+  position: relative;
+  z-index: 10;
+  margin: 20px 20px 0;
+  .row {
+    display: flex;
+    align-items: center;
+    & + .row {
+      margin-top: 20px;
+    }
+  }
+  .txt {
+    flex: 1 0 auto;
+    font-size: 26px;
+    &:last-child {
+      margin: 0;
+    }
+  }
+  .input {
+    box-sizing: border-box;
+    width: 80%;
+    margin: 0 15px;
+    border: 3px solid #000;
+    border-radius: 0;
+    padding: 5px 10px;
+    background: #eee;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 26px;
+    text-align: center;
+    outline: none;
+    &::placeholder {
+      font-size: 26px;
+    }
+  }
+  .mobile & {
+    margin-top: -20px;
+  }
+}
 .btn-wrap {
-  margin-top: 0;
   .btn-start {
     font-size: 26px;
   }

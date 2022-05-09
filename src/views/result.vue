@@ -1,10 +1,13 @@
 <template>
   <div class="result">
-    <h1 class="txt">당신의 웬만덕후 레벨은????</h1>
+    <h1 class="txt">{{ $store.state.userName }}님의 웬만덕후 레벨은????</h1>
     <div class="tit jua">"{{ result }}"</div>
     <h2 class="score">총점 {{ total }}점 입니다.</h2>
     <div class="btn-wrap">
       <button class="btn-replay" @click="replay">억울하면 다시하기</button>
+      <button class="btn-share" type="button" @click="copyUrl">
+        URL 복사하기
+      </button>
     </div>
   </div>
 </template>
@@ -15,7 +18,7 @@ import { mapState, mapMutations } from "vuex";
 export default {
   name: "result-page",
   computed: {
-    ...mapState(["score"]),
+    ...mapState(["score", "userName", "userAge"]),
   },
   mounted() {
     if (this.total >= 90) {
@@ -41,6 +44,17 @@ export default {
     replay() {
       this.$router.push("/");
       this.$store.commit("MU_RESET_SCORE");
+    },
+    copyUrl() {
+      const dummy = document.createElement("input");
+      const text = location.href;
+
+      document.body.appendChild(dummy);
+      dummy.value = text;
+      dummy.select();
+      document.execCommand("copy");
+      document.body.removeChild(dummy);
+      alert("URL을 복사했습니다.");
     },
   },
 };

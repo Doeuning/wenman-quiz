@@ -36,11 +36,10 @@ export default {
   display: block;
   position: relative;
   box-sizing: border-box;
-  border: 1px solid #888;
-  border-radius: 10px;
+  border: 2px solid #888;
   padding: 10px;
   cursor: pointer;
-  transition: all 0.3s;
+  font-size: 18px;
   input {
     display: block;
     position: absolute;

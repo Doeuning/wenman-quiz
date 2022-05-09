@@ -8,6 +8,8 @@ import deviceInfo from "./modules/device-info";
 export default new Vuex.Store({
   state: {
     mobileYn: false,
+    userName: "",
+    userAge: "",
     score: 0,
   },
   mutations: {
@@ -32,6 +34,10 @@ export default new Vuex.Store({
     },
     MU_RESET_SCORE(state) {
       state.score = 0;
+    },
+    GET_USER_INFO(state, payload) {
+      state.userName = payload.name;
+      state.userAge = payload.age;
     },
   },
   actions: {},

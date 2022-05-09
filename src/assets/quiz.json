@@ -415,7 +415,7 @@
       },
       {
         "id": 4,
-        "txt": "노구, 오중 - 건강원",
+        "txt": "노구, 오중 - 건강식품점",
         "checked": false
       }
     ]
@@ -527,27 +527,126 @@
     "a": [
       {
         "id": 1,
-        "txt": "착한 타잔같이 생겨서는",
+        "txt": "먹다버린 생선뼈같은 놈",
         "checked": false
       },
       {
         "id": 2,
-        "txt": "고기 사놓고 옆동네로 이사 가 버릴 놈",
+        "txt": "소고기 외상 달라 그러고 옆동네로 이사 가 버릴 놈",
         "checked": false
       },
       {
         "id": 3,
-        "txt": "",
+        "txt": "나라 팔아먹을 놈",
         "checked": false
       },
       {
         "id": 4,
-        "txt": "",
+        "txt": "된장같은 놈",
         "checked": false
       },
       {
         "id": 5,
-        "txt": "",
+        "txt": "짝짝이 젓가락같은 놈",
+        "checked": false
+      }
+    ]
+  },
+  {
+    "name": "quiz16",
+    "answer": 3,
+    "choosed": null,
+    "q": "종옥에 대한 홍렬의 마음을 알아차린 순서로 옳은 것은?",
+    "a": [
+      {
+        "id": 1,
+        "txt": "오중 - 영삼 - 은아 - 주현",
+        "checked": false
+      },
+      {
+        "id": 2,
+        "txt": "오중 - 주현 - 정수 - 은아",
+        "checked": false
+      },
+      {
+        "id": 3,
+        "txt": "오중 - 주현 - 은아 - 정수",
+        "checked": false
+      },
+      {
+        "id": 4,
+        "txt": "주현 - 오중 - 은아 - 정수",
+        "checked": false
+      },
+      {
+        "id": 5,
+        "txt": "주현 - 오중 - 정수 - 은아",
+        "checked": false
+      }
+    ]
+  },
+  {
+    "name": "quiz17",
+    "answer": 4,
+    "choosed": null,
+    "q": "극 중 한 번도 수면제를 먹지 않은 사람은?",
+    "a": [
+      {
+        "id": 1,
+        "txt": "재희",
+        "checked": false
+      },
+      {
+        "id": 2,
+        "txt": "오중",
+        "checked": false
+      },
+      {
+        "id": 3,
+        "txt": "미나",
+        "checked": false
+      },
+      {
+        "id": 4,
+        "txt": "주현",
+        "checked": false
+      },
+      {
+        "id": 5,
+        "txt": "민정",
+        "checked": false
+      }
+    ]
+  },
+  {
+    "name": "quiz18",
+    "answer": 4,
+    "choosed": null,
+    "q": "보기 중 홍렬의 처가식구 남자들의 별명이 아닌 것은?",
+    "a": [
+      {
+        "id": 1,
+        "txt": "땅봉뺑쫌올닭",
+        "checked": false
+      },
+      {
+        "id": 2,
+        "txt": "샤바쑛민대",
+        "checked": false
+      },
+      {
+        "id": 3,
+        "txt": "왕뽕구징징",
+        "checked": false
+      },
+      {
+        "id": 4,
+        "txt": "꼴두목청팔팔이",
+        "checked": false
+      },
+      {
+        "id": 5,
+        "txt": "나촉황황멀바",
         "checked": false
       }
     ]
