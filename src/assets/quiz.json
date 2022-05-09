@@ -650,5 +650,71 @@
         "checked": false
       }
     ]
+  },
+  {
+    "name": "quiz19",
+    "answer": 3,
+    "choosed": null,
+    "q": "노구가 좋아하는 음식이 아닌 것은?",
+    "a": [
+      {
+        "id": 1,
+        "txt": "양갱",
+        "checked": false
+      },
+      {
+        "id": 2,
+        "txt": "화과자",
+        "checked": false
+      },
+      {
+        "id": 3,
+        "txt": "우유",
+        "checked": false
+      },
+      {
+        "id": 4,
+        "txt": "콜라",
+        "checked": false
+      },
+      {
+        "id": 5,
+        "txt": "갈비",
+        "checked": false
+      }
+    ]
+  },
+  {
+    "name": "quiz20",
+    "answer": 1,
+    "choosed": null,
+    "q": "다음 중 민정을 좋아한다고 민정에게 오해받지 않은 사람은?",
+    "a": [
+      {
+        "id": 1,
+        "txt": "비디오가게 알바생",
+        "checked": false
+      },
+      {
+        "id": 2,
+        "txt": "함재희",
+        "checked": false
+      },
+      {
+        "id": 3,
+        "txt": "김지현",
+        "checked": false
+      },
+      {
+        "id": 4,
+        "txt": "김인종",
+        "checked": false
+      },
+      {
+        "id": 5,
+        "txt": "홍석천",
+        "checked": false
+      }
+    ]
   }
 ]
