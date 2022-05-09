@@ -8,8 +8,8 @@ import deviceInfo from "./modules/device-info";
 export default new Vuex.Store({
   state: {
     mobileYn: false,
-    userName: "노영삼",
-    userAge: 32,
+    userName: "",
+    userAge: 0,
     score: 0,
   },
   mutations: {
