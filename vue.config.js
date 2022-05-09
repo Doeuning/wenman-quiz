@@ -29,7 +29,7 @@ module.exports = defineConfig({
       entry: "src/main.js",
       template: "public/index.html",
       filename: "index.html",
-      title: "project",
+      title: "웬만해선 퀴즈를 맞힐 수 없다",
     },
   },
 });
