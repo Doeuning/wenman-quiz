@@ -71,7 +71,7 @@ export default {
     },
     copyUrl() {
       const dummy = document.createElement("input");
-      const text = location.href;
+      const text = location.href.replace(this.$route.fullPath, "");
 
       document.body.appendChild(dummy);
       dummy.value = text;
