@@ -7,7 +7,7 @@
         'level-4': result === '짱',
         'level-3': result === '붕',
         'level-2': result === '열라붕',
-        'level-1': result === '열라붕신',
+        'level-1': result === '열라붕어',
       }"
     >
       <img src="@/assets/images/level.jpg" alt="" />
@@ -64,7 +64,7 @@ export default {
       this.result = "열라붕"; // 7문제
       this.member = "함재희, 김지현";
     } else {
-      this.result = "열라붕신";
+      this.result = "열라붕어";
       this.member = "권오중";
     }
   },
