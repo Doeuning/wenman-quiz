@@ -31,7 +31,8 @@ export default new Vuex.Store({
     },
     MU_CHANGE_SCORE(state, payload) {
       let rightAnswers = 0;
-      payload.forEach((item) => {
+      payload.forEach((item, index) => {
+        console.log("index", index);
         if (item.answer === item.choosed) {
           rightAnswers++;
         }

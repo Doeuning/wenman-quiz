@@ -84,29 +84,26 @@ export default {
       }
     },
     prevQuiz() {
+      this.getScore();
       if (this.currIdx !== 0) {
         this.currIdx--;
-        this.getScore();
       } else {
         this.$router.push("/");
       }
     },
     nextQuiz() {
-      // 정답을 선택했으면 인덱스추가, 점수가져오기
       if (this.quiz[this.currIdx].choosed) {
-        this.currIdx++;
         this.getScore();
-        console.log("정답선택");
+        console.log(this.currIdx + 1, this.quiz.length);
+        if (this.currIdx + 1 >= this.quiz.length) {
+          this.$router.push("/result");
+        } else {
+          this.currIdx++;
+        }
       }
-      if (this.currIdx + 1 > this.quiz.length) {
-        this.$router.push("/result");
-        console.log("결과로 이동");
-      }
-
-      console.log(this.$store.state.score);
     },
     getScore() {
-      this.$store.commit("MU_CHANGE_SCORE", this.quiz); // 점수 변경
+      this.$store.commit("MU_CHANGE_SCORE", this.quiz);
     },
   },
 };
